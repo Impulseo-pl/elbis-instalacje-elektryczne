@@ -632,6 +632,14 @@ section{padding-block:clamp(64px,8vw,128px)}
 /* logo w panelu (biała wersja, przezroczyste tło) — wypełnia górny obszar hero */
 .hf-logo{width:clamp(190px,20vw,270px);height:auto;display:block;margin-bottom:var(--space-6)}
 
+/* Strona główna: nad hero logo w navie chowamy (jest już w panelu),
+   a menu wyrównujemy do lewej — żeby linki leżały na niebieskim panelu,
+   a nie na styku niebieski/zdjęcie. Po scrollu (nav-solid) wraca standard. */
+.is-home .nav:not(.nav-solid) .brand{display:none}
+@media(min-width:681px){
+  .is-home .nav:not(.nav-solid) .nav-links{justify-content:flex-start}
+}
+
 /* kicker z akcentową kreską (spójny z .eyebrow reszty strony) */
 .hf-kicker{color:#8fbcf0;display:inline-flex;align-items:center;gap:.65rem}
 .hf-kicker::before{content:"";width:28px;height:2px;border-radius:2px;background:currentColor;display:inline-block}
