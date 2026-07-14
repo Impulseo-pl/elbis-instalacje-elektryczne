@@ -618,7 +618,7 @@ section{padding-block:clamp(64px,8vw,128px)}
    ============================================================ */
 
 /* HERO: panel = brandowy niebieski gradient (przedłużenie logo), gładki styk ze zdjęciem */
-.hero-fach{position:relative}
+.hero-fach{position:relative;padding:0}
 .hf-panel{
   background:linear-gradient(140deg,#00408f 0%,#012a5e 58%,#011b41 100%);
   position:relative;z-index:2;
