@@ -611,4 +611,45 @@ section{padding-block:clamp(64px,8vw,128px)}
 }
 
 /* === auto-paleta ze zdjęć klienta (dopasowanie do estetyki socials) === */
-:root{--accent:#7E6C1E;--accent-d:#574A11;--accent-soft:rgba(126,108,30,0.10);--paper:#F9F9F8;--paper-2:#EFEFED;--paper-3:#E8E8E5;}
+:root{--accent:#0f5ab0;--accent-d:#0a4183;--accent-soft:rgba(15,90,176,0.10);--paper:#F7F9FB;--paper-2:#EAF0F6;--paper-3:#E1E9F2;}
+
+/* ============================================================
+   BRAND REFRESH — ELBiS (kobaltowy niebieski z logo, białe litery)
+   ============================================================ */
+
+/* HERO: panel = brandowy niebieski gradient (przedłużenie logo), gładki styk ze zdjęciem */
+.hero-fach{position:relative}
+.hf-panel{
+  background:linear-gradient(140deg,#00408f 0%,#012a5e 58%,#011b41 100%);
+  position:relative;z-index:2;
+  box-shadow:38px 0 80px -34px rgba(0,20,52,.65);
+  padding:clamp(2.4rem,5vw,4.8rem) clamp(1.8rem,4vw,3.8rem);
+}
+.hf-panel::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(130% 90% at 8% -10%,rgba(94,156,236,.20),transparent 58%)}
+.hf-panel>*{position:relative;z-index:1}
+
+/* kicker z akcentową kreską (spójny z .eyebrow reszty strony) */
+.hf-kicker{color:#8fbcf0;display:inline-flex;align-items:center;gap:.65rem}
+.hf-kicker::before{content:"";width:28px;height:2px;border-radius:2px;background:currentColor;display:inline-block}
+
+.hf-title{margin:var(--space-4) 0 var(--space-5);max-width:16ch}
+.hf-phone-num .ico-tel{color:#8fbcf0}
+.hf-phone:hover .hf-phone-num{color:#d5e6fa}
+
+/* przyciski na niebieskim panelu: primary = biały (czysto, kontrastowo) */
+.hf-actions .btn-light{background:#fff;color:#012a5e;font-weight:700}
+.hf-actions .btn-light:hover{background:#e9f1fc;color:#00408f;transform:translateY(-2px)}
+.hf-ghost{color:#fff;border-color:rgba(255,255,255,.5)}
+.hf-ghost:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.06)}
+
+/* meta pod przyciskami — lokalizacja (dopełnia panel, buduje zaufanie) */
+.hf-meta{margin-top:var(--space-6);padding-top:var(--space-4);
+  border-top:1px solid rgba(255,255,255,.16);
+  display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;
+  color:rgba(255,255,255,.78);font-size:var(--text-sm);font-weight:500}
+.hf-meta span{display:inline-flex;align-items:center;gap:.5rem}
+.hf-meta span::before{content:"";width:6px;height:6px;border-radius:50%;background:#8fbcf0;flex:none}
+
+/* promise bar: kropki w brandowym niebieskim (spójność) */
+.fp-row li:not(:last-child)::after{background:var(--accent)}
