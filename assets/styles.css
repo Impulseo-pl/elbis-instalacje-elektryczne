@@ -629,6 +629,9 @@ section{padding-block:clamp(64px,8vw,128px)}
   background:radial-gradient(130% 90% at 8% -10%,rgba(94,156,236,.20),transparent 58%)}
 .hf-panel>*{position:relative;z-index:1}
 
+/* logo w panelu (biała wersja, przezroczyste tło) — wypełnia górny obszar hero */
+.hf-logo{width:clamp(190px,20vw,270px);height:auto;display:block;margin-bottom:var(--space-6)}
+
 /* kicker z akcentową kreską (spójny z .eyebrow reszty strony) */
 .hf-kicker{color:#8fbcf0;display:inline-flex;align-items:center;gap:.65rem}
 .hf-kicker::before{content:"";width:28px;height:2px;border-radius:2px;background:currentColor;display:inline-block}
